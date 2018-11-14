@@ -6,24 +6,31 @@ Future manuscript on the evolution of egg producing units (ovarioles) in Hawaiia
 ## Comparative analyses
 
 `analyses.r`
-This file contains the code required to reproduce the tables in our upcoming manuscript. The code performs an statistical comparison of ecological models, and tests the relationship between reproductive traits with a Phylogenetic Least Squares Regression (PGLS).
+
+This file contains the code required to reproduce the tables in our upcoming manuscript. The code performs a statistical comparison of ecological models, and tests the relationship between reproductive traits with a Phylogenetic Least Squares Regression (PGLS).
 
 `plots.r`
+
 This file contains the code required to reproduce the figures in our upcoming manuscript. The code performs an ancestral state reconstruction and plots the result of a PGLS regression of reproductive traits.
 
 ## Ecological classification of taxa
 `ecological_classification.txt`
-This file contains the coding scheme used to classify the taxa in our study, taken from Magnacca, Karl N., David Foote, and Patrick M. O’Grady. "A review of the endemic Hawaiian Drosophilidae and their host plants." Zootaxa 1728.1 (2008): 58.
+
+This file contains the coding scheme used to classify the taxa in our study, as recorded in *Magnacca, Karl N., David Foote, and Patrick M. O’Grady. _A review of the endemic Hawaiian Drosophilidae and their host plants._ Zootaxa 1728.1 (2008): 58.*
 
 ## Phylogenetic results
 The following files are the results of our phylogenetic analysis of Hawaiian _Drosophila_. All are nexus format.
 
 `nuc_mt_beast_posterior.trees`
+
 `nuc_mt_beast_mcc.tre`
+
 These are the posterior distribution and maximum clade credibility trees, estimated using both nuclear and mitochondrial markers.
 
 `mt_beast_posterior.trees`
+
 `mt_beast_mcc.tre`
+
 These are the posterior distribution and maximum clade credibility trees, estimated using only mitochondrial markers.
 
 # R Package versions
