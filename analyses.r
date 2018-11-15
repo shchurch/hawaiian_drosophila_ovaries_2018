@@ -78,7 +78,7 @@ eggs_logs <- logs %>% mutate(trait = egg_vol)
 
 
 ### This reads in the posterior distributions of phylogenetic trees, and then samples n number of trees for uncertainty estimates
-sample_size <- 1000
+sample_size <- 100
 
 # all genetic data trees
 raw_all_trees <- read.nexus("nuc_mt_beast_posterior.trees")
