@@ -1,0 +1,35 @@
+### SPECIES DELINEATION ###
+
+# concatenated published sequences (from all publications, combined by gene, shorthand all_[gene]) with newly generated sequence data with corresponding species IDs (shorthand HI_[gene]_new_ids.fasta)
+
+# e.g. HI_Dros_16S_new_ids + all_16S -> HI_and_all_16S
+
+#aligned each gene
+
+mafft --auto --inputorder HI_and_all_16S.fasta > HI_and_all_16S_mafft.fasta
+mafft --auto --inputorder HI_and_all_COI.fasta > HI_and_all_COI_mafft.fasta
+mafft --auto --inputorder HI_and_all_ND2.fasta > HI_and_all_ND2_mafft.fasta
+mafft --auto --inputorder HI_and_all_COII.fasta > HI_and_all_COII_mafft.fasta
+
+# examined alignment by eye, looked for poorly aligning sequences
+# removed from COII glabriapex, remota, frustilifera, DS_11_7_1
+# reverse complemented HI_Dros_16S seqs
+# removed duplicates
+# realigned 16S and COII
+
+#trim each gene
+
+Gblocks HI_and_all_16S_mafft.fasta -b5=h -t=d
+Gblocks HI_and_all_COI_mafft.fasta -b5=h -t=d
+Gblocks HI_and_all_ND2_mafft.fasta -b5=h -t=d
+Gblocks HI_and_all_COII_mafft.fasta -b5=h -t=d
+
+#(need to resave in SeaView)
+
+#called raxml
+
+raxmlHPC -s HI_and_all_COI_mafft.fasta-gb -n HI_and_all_COI -m GTRGAMMAI -p 12345
+raxmlHPC -s HI_and_all_COII_mafft.fasta-gb -n HI_and_all_COII -m GTRGAMMAI -p 12345
+raxmlHPC -s HI_and_all_ND2_mafft.fasta-gb -n HI_and_all_ND2 -m GTRGAMMAI -p 12345
+raxmlHPC -s HI_and_all_16S_mafft.fasta-gb -n HI_and_all_16S -m GTRGAMMAI -p 12345
+

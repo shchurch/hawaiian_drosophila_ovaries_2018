@@ -1,0 +1,150 @@
+#COMMANDS FOR RAxML ANALYSIS
+# SHC - 2/8/2016
+
+# imported fasta files from GenBank from the following publications:
+# mito 	=	O’Grady, Patrick M., et al. "Phylogenetic and ecological relationships of the Hawaiian Drosophila inferred by mitochondrial DNA analysis." Molecular Phylogenetics and Evolution 58.2 (2011): 244-256.
+# scapto	=	Lapoint, Richard T., Patrick M. O’Grady, and Noah K. Whiteman. "Diversification and dispersal of the Hawaiian Drosophilidae: The evolution of Scaptomyza." Molecular phylogenetics and evolution 69.1 (2013): 95-108.
+# AMC	=	Lapoint, Richard T., Karl N. Magnacca, and Patrick M. O’Grady. "Phylogenetics of the antopocerus-modified tarsus clade of Hawaiian Drosophila: diversification across the Hawaiian islands." PloS one 9.11 (2014): e113227.
+# pict	=	Magnacca, Karl N., and Donald K. Price. "Rapid adaptive radiation and host plant conservation in the Hawaiian picture wing Drosophila (Diptera: Drosophilidae)." Molecular phylogenetics and evolution 92 (2015): 226-242.
+
+# parsed names using phyutility
+
+phyutility -parse 4 -in AMC_boss.fasta -out AMC_boss_parsed.fasta
+phyutility -parse 4 -in AMC_ef1g.fasta -out AMC_ef1g_parsed.fasta
+phyutility -parse 4 -in AMC_frizzled.fasta -out AMC_frizzled_parsed.fasta
+phyutility -parse 4 -in AMC_kl2.fasta -out AMC_kl2_parsed.fasta
+phyutility -parse 4 -in AMC_l2not.fasta -out AMC_l2not_parsed.fasta
+phyutility -parse 4 -in AMC_pds5.fasta -out AMC_pds5_parsed.fasta
+phyutility -parse 4 -in AMC_snf.fasta -out AMC_snf_parsed.fasta
+phyutility -parse 4 -in AMC_wee.fasta -out AMC_wee_parsed.fasta
+phyutility -parse 4 -in AMC_yp1.fasta -out AMC_yp1_parsed.fasta
+phyutility -parse 4 -in AMC_yp2.fasta -out AMC_yp2_parsed.fasta
+phyutility -parse 4 -in mito_16s.fasta -out mito_16s_parsed.fasta
+phyutility -parse 4 -in mito_coi.fasta -out mito_coi_parsed.fasta
+phyutility -parse 4 -in mito_coii.fasta -out mito_coii_parsed.fasta
+phyutility -parse 4 -in mito_nd2.fasta -out mito_nd2_parsed.fasta
+phyutility -parse 4 -in pict_ef1g.fasta -out pict_ef1g_parsed.fasta
+phyutility -parse 4 -in pict_frizzled.fasta -out pict_frizzled_parsed.fasta
+phyutility -parse 4 -in pict_gpdh.fasta -out pict_gpdh_parsed.fasta
+phyutility -parse 4 -in pict_pgi.fasta -out pict_pgi_parsed.fasta
+phyutility -parse 4 -in pict_yp2.fasta -out pict_yp2_parsed.fasta
+phyutility -parse 4 -in scapto_16S.fasta -out scapto_16S_parsed.fasta
+phyutility -parse 4 -in scapto_cad.fasta -out scapto_cad_parsed.fasta
+phyutility -parse 4 -in scapto_coi.fasta -out scapto_coi_parsed.fasta
+phyutility -parse 4 -in scapto_coii.fasta -out scapto_coii_parsed.fasta
+phyutility -parse 4 -in scapto_gstd1.fasta -out scapto_gstd1_parsed.fasta
+phyutility -parse 4 -in scapto_l2not.fasta -out scapto_l2not_parsed.fasta
+phyutility -parse 4 -in scapto_marf.fasta -out scapto_marf_parsed.fasta
+phyutility -parse 4 -in scapto_nd2.fasta -out scapto_nd2_parsed.fasta
+
+# checked all names, corrected errors by phyutility (typically nr. or sp. species)
+
+# combined like genes from separate papers (l2not, coi, coii, nd2, frizzled, yp2, 16S, ef1g)
+# new files names are called "all_(gene)"
+
+# aligned by gene using MAFFT
+
+mafft --auto --inputorder all_16S.fasta > all_16S_mafft.fasta
+mafft --auto --inputorder all_coi.fasta > all_coi_mafft.fasta
+mafft --auto --inputorder all_coii.fasta > all_coii_mafft.fasta
+mafft --auto --inputorder all_ef1g.fasta > all_ef1g_mafft.fasta
+mafft --auto --inputorder all_frizzled.fasta > all_frizzled_mafft.fasta
+mafft --auto --inputorder all_l2not.fasta > all_l2not_mafft.fasta
+mafft --auto --inputorder all_nd2.fasta > all_nd2_mafft.fasta
+mafft --auto --inputorder all_yp2.fasta > all_yp2_mafft.fasta
+mafft --auto --inputorder AMC_boss_parsed.fasta > AMC_boss_parsed_mafft.fasta
+mafft --auto --inputorder AMC_kl2_parsed.fasta > AMC_kl2_parsed_mafft.fasta
+mafft --auto --inputorder AMC_pds5_parsed.fasta > AMC_pds5_parsed_mafft.fasta
+mafft --auto --inputorder AMC_snf_parsed.fasta > AMC_snf_parsed_mafft.fasta
+mafft --auto --inputorder AMC_wee_parsed.fasta > AMC_wee_parsed_mafft.fasta
+mafft --auto --inputorder AMC_yp1_parsed.fasta > AMC_yp1_parsed_mafft.fasta
+mafft --auto --inputorder pict_gpdh_parsed.fasta > pict_gpdh_parsed_mafft.fasta
+mafft --auto --inputorder pict_pgi_parsed.fasta > pict_pgi_parsed_mafft.fasta
+mafft --auto --inputorder scapto_cad_parsed.fasta > scapto_cad_parsed_mafft.fasta
+mafft --auto --inputorder scapto_gstd1_parsed.fasta > scapto_gstd1_parsed_mafft.fasta
+mafft --auto --inputorder scapto_marf_parsed.fasta > scapto_marf_parsed_mafft.fasta
+mafft --auto --inputorder all_16S.fasta > all_16S_mafft.fasta
+mafft --auto --inputorder all_coi.fasta > all_coi_mafft.fasta
+mafft --auto --inputorder all_coii.fasta > all_coii_mafft.fasta
+mafft --auto --inputorder all_ef1g.fasta > all_ef1g_mafft.fasta
+mafft --auto --inputorder all_frizzled.fasta > all_frizzled_mafft.fasta
+mafft --auto --inputorder all_l2not.fasta > all_l2not_mafft.fasta
+mafft --auto --inputorder all_nd2.fasta > all_nd2_mafft.fasta
+mafft --auto --inputorder all_yp2.fasta > all_yp2_mafft.fasta
+mafft --auto --inputorder scapto_16S_parsed.fasta > scapto_16S_parsed_mafft.fasta
+mafft --auto --inputorder scapto_coi_parsed.fasta > scapto_coi_parsed_mafft.fasta
+mafft --auto --inputorder scapto_coii_parsed.fasta > scapto_coii_parsed_mafft.fasta
+mafft --auto --inputorder scapto_l2not_parsed.fasta > scapto_l2not_parsed_mafft.fasta
+mafft --auto --inputorder scapto_nd2_parsed.fasta > scapto_nd2_parsed_mafft.fasta
+mafft --auto --inputorder AMC_ef1g_parsed.fasta > AMC_ef1g_parsed_mafft.fasta
+mafft --auto --inputorder AMC_frizzled_parsed.fasta > AMC_frizzled_parsed_mafft.fasta
+mafft --auto --inputorder AMC_l2not_parsed.fasta > AMC_l2not_parsed_mafft.fasta
+mafft --auto --inputorder AMC_yp2_parsed.fasta > AMC_yp2_parsed_mafft.fasta
+mafft --auto --inputorder mito_16s_parsed.fasta > mito_16s_parsed_mafft.fasta
+mafft --auto --inputorder mito_coi_parsed.fasta > mito_coi_parsed_mafft.fasta
+mafft --auto --inputorder mito_coii_parsed.fasta > mito_coii_parsed_mafft.fasta
+mafft --auto --inputorder mito_nd2_parsed.fasta > mito_nd2_parsed_mafft.fasta
+mafft --auto --inputorder pict_ef1g_parsed.fasta > pict_ef1g_parsed_mafft.fasta
+mafft --auto --inputorder pict_frizzled_parsed.fasta > pict_frizzled_parsed_mafft.fasta
+mafft --auto --inputorder pict_yp2_parsed.fasta > pict_yp2_parsed_mafft.fasta
+
+#checked each alignement by eye, made adjustments which included the following:
+
+# reverse complemented certain sequences in 16S
+# removed Drosophila_perissopoda (kl2?) from all_frizzled
+# removed Drosophila_reschae, Drosophila_melanoloma, Scaptomyza_chauliodon, Scaptomyza_hamata, Scaptomyza_palata from all_coi
+# removed Drosophila_expansa from AMC_pds5
+# realigned each of these genes (coi, frizzled, pds5, 16S) using mafft -> alignements improved considerable
+
+# trimmed each genes using GBlocks
+
+Gblocks all_coi_mafft.fasta -b5=h -t=d
+Gblocks all_frizzled_mafft.fasta -b5=h -t=d
+Gblocks scapto_marf_parsed_mafft.fasta -b5=h -t=d
+Gblocks scapto_gstd1_parsed_mafft.fasta -b5=h -t=d
+Gblocks scapto_cad_parsed_mafft.fasta -b5=h -t=d
+Gblocks pict_pgi_parsed_mafft.fasta -b5=h -t=d
+Gblocks pict_gpdh_parsed_mafft.fasta -b5=h -t=d
+Gblocks AMC_yp1_parsed_mafft.fasta -b5=h -t=d
+Gblocks AMC_wee_parsed_mafft.fasta -b5=h -t=d
+Gblocks AMC_snf_parsed_mafft.fasta -b5=h -t=d
+Gblocks AMC_pds5_parsed_mafft.fasta -b5=h -t=d
+Gblocks AMC_kl2_parsed_mafft.fasta -b5=h -t=d
+Gblocks AMC_boss_parsed_mafft.fasta -b5=h -t=d
+Gblocks all_yp2_mafft.fasta -b5=h -t=d
+Gblocks all_nd2_mafft.fasta -b5=h -t=d
+Gblocks all_l2not_mafft.fasta -b5=h -t=d
+Gblocks all_ef1g_mafft.fasta -b5=h -t=d
+Gblocks all_coii_mafft.fasta -b5=h -t=d
+Gblocks all_16S_mafft.fasta -b5=h -t=d
+Gblocks pict_yp2_parsed_mafft.fasta -b5=h -t=d
+Gblocks pict_frizzled_parsed_mafft.fasta -b5=h -t=d
+Gblocks pict_ef1g_parsed_mafft.fasta -b5=h -t=d
+Gblocks mito_nd2_parsed_mafft.fasta -b5=h -t=d
+Gblocks mito_coii_parsed_mafft.fasta -b5=h -t=d
+Gblocks AMC_yp2_parsed_mafft.fasta -b5=h -t=d
+Gblocks AMC_l2not_parsed_mafft.fasta -b5=h -t=d
+Gblocks AMC_ef1g_parsed_mafft.fasta -b5=h -t=d
+Gblocks scapto_nd2_parsed_mafft.fasta -b5=h -t=d
+Gblocks scapto_l2not_parsed_mafft.fasta -b5=h -t=d
+Gblocks scapto_coii_parsed_mafft.fasta -b5=h -t=d
+Gblocks scapto_coi_parsed_mafft.fasta -b5=h -t=d
+Gblocks scapto_16S_parsed_mafft.fasta -b5=h -t=d
+Gblocks mito_16s_parsed_mafft.fasta -b5=h -t=d
+Gblocks mito_coi_parsed_mafft.fasta -b5=h -t=d
+Gblocks AMC_frizzled_parsed_mafft.fasta -b5=h -t=d
+
+# (need to save all again in seaview for formatting to work in phyutility)
+
+# concatenated all sequences using phyutilty into a series of matrices with the following names:
+
+# sequences from all publications, all genes = named all_all
+
+phyutility -concat -in all_coi_mafft.fasta-gb all_coii_mafft.fasta-gb all_16S_mafft.fasta-gb all_nd2_mafft.fasta-gb scapto_cad_parsed_mafft.fasta-gb scapto_gstd1_parsed_mafft.fasta-gb scapto_marf_parsed_mafft.fasta-gb all_l2not_mafft.fasta-gb all_ef1g_mafft.fasta-gb all_frizzled_mafft.fasta-gb all_yp2_mafft.fasta-gb pict_gpdh_parsed_mafft.fasta-gb pict_pgi_parsed_mafft.fasta-gb AMC_boss_parsed_mafft.fasta-gb AMC_kl2_parsed_mafft.fasta-gb AMC_pds5_parsed_mafft.fasta-gb AMC_snf_parsed_mafft.fasta-gb AMC_wee_parsed_mafft.fasta-gb AMC_yp1_parsed_mafft.fasta-gb -out all_all.nxs
+
+# mitochondrial sequences only, from all publications = new mito
+
+phyutility -concat -in all_coi_mafft.fasta-gb all_coii_mafft.fasta-gb all_16S_mafft.fasta-gb all_nd2_mafft.fasta-gb -out new_mito.nxs
+
+
+

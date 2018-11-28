@@ -1,0 +1,156 @@
+
+You are using a proportion of Invariable sites estimate, although I don't
+like it. The likelihood epsilon "-f e" will be automatically lowered to 0.001
+to avoid unfavorable effects caused by simultaneous optimization of alpha and P-Invar
+
+
+IMPORTANT WARNING: Sequences Drosophila_nigella and DS19_45 are exactly identical
+
+
+IMPORTANT WARNING: Sequences Drosophila_ancyla and Drosophila_trichaetosa are exactly identical
+
+
+IMPORTANT WARNING: Sequences Drosophila_apodasta and Drosophila_nr_basimacula_2 are exactly identical
+
+
+IMPORTANT WARNING: Sequences Drosophila_imparisetae and Drosophila_seclusa are exactly identical
+
+
+IMPORTANT WARNING: Sequences Drosophila_nr_perissopoda_1 and DS11_4 are exactly identical
+
+
+IMPORTANT WARNING: Sequences Drosophila_nr_perissopoda_2 and ZA57_219 are exactly identical
+
+
+IMPORTANT WARNING: Sequences Drosophila_nr_perissopoda_2 and ZA57_215 are exactly identical
+
+
+IMPORTANT WARNING: Sequences Drosophila_nr_perissopoda_2 and ZA57_214 are exactly identical
+
+
+IMPORTANT WARNING: Sequences Drosophila_nr_perissopoda_2 and ZA57_213 are exactly identical
+
+
+IMPORTANT WARNING: Sequences Drosophila_nr_perissopoda_2 and ZA57_212 are exactly identical
+
+
+IMPORTANT WARNING: Sequences Drosophila_nr_perissopoda_2 and ZA57_209 are exactly identical
+
+
+IMPORTANT WARNING: Sequences Drosophila_nr_perissopoda_3 and ZA57_211 are exactly identical
+
+
+IMPORTANT WARNING: Sequences Drosophila_percnosoma and DS21_14 are exactly identical
+
+
+IMPORTANT WARNING: Sequences Drosophila_percnosoma and DS19_21 are exactly identical
+
+
+IMPORTANT WARNING: Sequences Drosophila_percnosoma and DS18_3 are exactly identical
+
+
+IMPORTANT WARNING: Sequences Drosophila_percnosoma and A2_5 are exactly identical
+
+
+IMPORTANT WARNING: Sequences ZA57_203 and ZA51_202 are exactly identical
+
+
+IMPORTANT WARNING: Sequences ZA52_205 and ZA51_203 are exactly identical
+
+
+IMPORTANT WARNING: Sequences ZA51_211 and ZA51_207 are exactly identical
+
+
+IMPORTANT WARNING: Sequences ZA51_211 and ZA51_200 are exactly identical
+
+
+IMPORTANT WARNING: Sequences DS22_21 and DS21_33 are exactly identical
+
+
+IMPORTANT WARNING: Sequences DS22_21 and DS19_3 are exactly identical
+
+
+IMPORTANT WARNING: Sequences DS19_29 and DS18_12 are exactly identical
+
+
+IMPORTANT WARNING: Sequences DS16_52 and DS16_49 are exactly identical
+
+
+IMPORTANT WARNING: Sequences DS16_52 and DS16_14 are exactly identical
+
+IMPORTANT WARNING
+Found 25 sequences that are exactly identical to other sequences in the alignment.
+Normally they should be excluded from the analysis.
+
+Just in case you might need it, an alignment file with 
+sequence duplicates removed is printed to file HI_and_all_COI_mafft.fasta-gb.reduced
+
+
+Using BFGS method to optimize GTR rate parameters, to disable this specify "--no-bfgs" 
+
+
+
+This is RAxML version 8.2.3 released by Alexandros Stamatakis on August 12 2015.
+
+With greatly appreciated code contributions by:
+Andre Aberer      (HITS)
+Simon Berger      (HITS)
+Alexey Kozlov     (HITS)
+Kassian Kobert    (HITS)
+David Dao         (KIT and HITS)
+Nick Pattengale   (Sandia)
+Wayne Pfeiffer    (SDSC)
+Akifumi S. Tanabe (NRIFS)
+
+Alignment has 508 distinct alignment patterns
+
+Found 0 invariant alignment patterns that correspond to 0 columns 
+Proportion of gaps and completely undetermined characters in this alignment: 9.78%
+
+RAxML rapid hill-climbing mode
+
+Using 1 distinct models/data partitions with joint branch length optimization
+
+
+Executing 1 inferences on the original alignment using 1 distinct randomized MP trees
+
+All free model parameters will be estimated by RAxML
+GAMMA+P-Invar model of rate heteorgeneity, ML estimate of alpha-parameter
+
+GAMMA+P-Invar Model parameters will be estimated up to an accuracy of 0.0010000000 Log Likelihood units
+
+Partition: 0
+Alignment Patterns: 508
+Name: No Name Provided
+DataType: DNA
+Substitution Matrix: GTR
+
+
+
+
+RAxML was called as follows:
+
+raxmlHPC -s HI_and_all_COI_mafft.fasta-gb -n HI_and_all_COI -m GTRGAMMAI -p 12345 
+
+
+Partition: 0 with name: No Name Provided
+Base frequencies: 0.296 0.156 0.143 0.405 
+
+Inference[0]: Time 2492.305710 GAMMA+P-Invar-based likelihood -18135.790707, best rearrangement setting 20
+alpha[0]: 0.586678 invar[0]: 0.263709 rates[0] ac ag at cg ct gt: 1.303012 15.003009 4.206668 1.651800 23.742504 1.000000 
+
+
+Conducting final model optimizations on all 1 trees under GAMMA-based models ....
+
+Inference[0] final GAMMA-based Likelihood: -18135.679443 tree written to file /Users/extavourlab/Downloads/Didem_Comparative_Apr_12/Species_Delineation_Sequences/RAxML_result.HI_and_all_COI
+
+
+Starting final GAMMA-based thorough Optimization on tree 0 likelihood -18135.679443 .... 
+
+Final GAMMA-based Score of best tree -18135.665857
+
+Program execution info written to /Users/extavourlab/Downloads/Didem_Comparative_Apr_12/Species_Delineation_Sequences/RAxML_info.HI_and_all_COI
+Best-scoring ML tree written to: /Users/extavourlab/Downloads/Didem_Comparative_Apr_12/Species_Delineation_Sequences/RAxML_bestTree.HI_and_all_COI
+
+Overall execution time: 2742.228583 secs or 0.761730 hours or 0.031739 days
+
