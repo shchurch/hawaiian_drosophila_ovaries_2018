@@ -1,42 +1,46 @@
-Published sequence data on Hawaiian Drosophila
+#### Published sequence data on Hawaiian Drosophila
+
 Created by SHC in April 2016
 
-## Directories
+### Directories
 
-`raw matrices/` 
+`raw matrices/` <br/>
 sequences as they came from GenBank
 
-`parsed matrices/`  
+`parsed matrices/`<br/>  
 sequences with the taxon IDs parsed to be concordant
 
-`aligned/` 
+`aligned/` <br/>
 alignments for each gene
 
-`trimmed/`  
+`trimmed/`  <br/>
 Gblocks trimmed alignements for each gene
 
-`final/` 
-concatenated matrices in fasta, nexus, and phylip formats, including
+`final/` <br/>
+concatenated matrices in fasta, nexus, and phylip formats, including the final matrices used for phylogenetic analysis in BEAST
 
-`all_all` = sequences from all publications, concatenating all genes
-`new_mito` = only published mitochondrial sequences
+`all_all`<br/>
+sequences from all publications, concatenating all genes
 
-## Code
+`new_mito`<br/>
+only published mitochondrial sequences
 
-`sequence_processing_commands.txt`
+### Code
+
+`sequence_processing_commands.txt`<br/>
 Commands used to process published sequences 
 
-## Data Sources
+### Data Sources
 imported fasta files from GenBank from the following publications, referred to by the following shorthand titles.
 
-`mito`
+`mito`<br/>
 O’Grady, Patrick M., et al. "Phylogenetic and ecological relationships of the Hawaiian Drosophila inferred by mitochondrial DNA analysis." _Molecular Phylogenetics and Evolution_ 58.2 (2011): 244-256.
 
-`scatpo`
+`scatpo`<br/>
 Lapoint, Richard T., Patrick M. O’Grady, and Noah K. Whiteman. "Diversification and dispersal of the Hawaiian Drosophilidae: The evolution of Scaptomyza." _Molecular phylogenetics and evolution_ 69.1 (2013): 95-108.
 
-`AMC`
+`AMC`<br/>
 Lapoint, Richard T., Karl N. Magnacca, and Patrick M. O’Grady. "Phylogenetics of the antopocerus-modified tarsus clade of Hawaiian Drosophila: diversification across the Hawaiian islands." _PloS one_ 9.11 (2014): e113227.
 
-`pict`
+`pict`<br/>
 Magnacca, Karl N., and Donald K. Price. "Rapid adaptive radiation and host plant conservation in the Hawaiian picture wing Drosophila (Diptera: Drosophilidae)." _Molecular phylogenetics and evolution_ 92 (2015): 226-242.
