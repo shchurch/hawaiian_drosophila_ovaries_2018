@@ -18,6 +18,9 @@ This file contains the code required to reproduce the figures in our upcoming ma
 
 This file contains the coding scheme used to classify the taxa in our study, as recorded in *Magnacca, Karl N., David Foote, and Patrick M. O’Grady. _A review of the endemic Hawaiian Drosophilidae and their host plants._ Zootaxa 1728.1 (2008): 58.*
 
+## sequence_data_methods/
+This directory contains all of the genetic sequence data, code, and resultant gene trees used to perform the species delineation analysis. It also contains the final matrices used in the phylgoenetic analysis with BEAST.
+
 ## Phylogenetic results
 The following files are the results of our phylogenetic analysis of Hawaiian _Drosophila_. All are nexus format.
 
