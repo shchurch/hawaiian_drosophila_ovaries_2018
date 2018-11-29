@@ -13,6 +13,10 @@ This file contains the code required to reproduce the tables in our upcoming man
 
 This file contains the code required to reproduce the figures in our upcoming manuscript. The code performs an ancestral state reconstruction and plots the result of a PGLS regression of reproductive traits.
 
+`data.txt` `avgs.txt` `logs.txt`
+
+These files are the raw ovariole number, body size, and egg size data used in the comparative anlaysis. `data.txt` is required as input for `analyses.r`, while the averages `avgs.txt` and log transformed averages `logs.txt` are output.
+
 ## Ecological classification of taxa
 `ecological_classification.txt`
 
