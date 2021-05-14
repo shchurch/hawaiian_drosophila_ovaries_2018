@@ -1,5 +1,5 @@
 # hawaiian_drosophila_ovaries_2018
-Code associated with the mansucript Reproductive Capacity Evolves in Response to Ecology through Common Changes in Cell Number in Hawaiian _Drosophila_, published in Current Biology: https://doi.org/10.1016/j.cub.2019.04.063 and BioRxiv: https://doi.org/10.1101/470898
+Code associated with the mansucript *Reproductive Capacity Evolves in Response to Ecology through Common Changes in Cell Number in Hawaiian _Drosophila_*, published in Current Biology: https://doi.org/10.1016/j.cub.2019.04.063 and BioRxiv: https://doi.org/10.1101/470898
 
 # Contents
 
